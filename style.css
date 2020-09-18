@@ -60,7 +60,25 @@ fieldset{border-width:0; padding:0; margin:0;}
 
 .unordered-list {
   margin-right: 1rem;
+}
 
+.nav-bar-hamburger {
+  display: none;
+
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 28px;
+
+}
+
+@media (max-width: 725px) {
+  .unordered-list {
+    display: none;
+  }
+  .nav-bar-hamburger {
+    display: block;
+  }
 }
 
 .unordered-list__link{
@@ -72,6 +90,37 @@ fieldset{border-width:0; padding:0; margin:0;}
   line-height: 120px;;
   font-size: var(--fs-h3);
   color: var(--clr-light);
+}
+
+.nav-open{
+  position: fixed;
+  display: none;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  background-color: var(--clr-dark);
+  text-align: center;
+}
+
+.mobile-unordered-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+
+}
+
+.mobile-unordered-list__link__list {
+
+  padding: 0 20px;
+  font-size: var(--fs-h3);
+  color: var(--clr-light);
+  font-size: var(--fs-h2);
+
 }
 
 /* HERO SECTION */
@@ -106,7 +155,13 @@ fieldset{border-width:0; padding:0; margin:0;}
   height: 100%;
 }
 
-.slide-2 span {  color: var(--clr-dark);
+.slide-2__span {  color: var(--clr-dark);
+}
+
+@media (max-width: 1300px){
+  .slide-2__span {
+    color: var(--clr-accent);
+  }
 }
 
 .slide-3 {
@@ -147,6 +202,14 @@ fieldset{border-width:0; padding:0; margin:0;}
   line-height: 800px;
 
   position: absolute;
+}
+
+@media (max-width: 1165px){
+  .arrow-left, .arrow-right {
+  line-height: 0;
+  bottom: 0;
+  margin-bottom: 1rem;
+  }
 }
 
 /* Services Section */

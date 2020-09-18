@@ -14,7 +14,8 @@
   </head>
   <body class="body">
     <header class="header" id="home">
-      <a class="logo-link" href="#home"><img class="logo-link__img" alt="maya" src="img/frog.png"/></a>
+      <a class="logo-link" href="#home" title="Sr. Kamb&#243;"><img class="logo-link__img" alt="maya" src="img/frog.png"/></a>
+      <button class="nav-bar-hamburger" aria-label="Dropdown Menu" onclick="navBarOpen()"><img src="img/misc/mobile-navigation.png" /></button>
       <ul class="unordered-list">
         <a class="unordered-list__link" href="#home"><li class="unordered-list__link__list">Home</li></a>
         <a class="unordered-list__link" href="#services"><li class="unordered-list__link__list">Services</li></a>
@@ -22,19 +23,30 @@
         <a class="unordered-list__link" href="#sessions"><li class="unordered-list__link__list">Sessions</li></a>
         <a class="unordered-list__link" href="#contact"><li class="unordered-list__link__list">Contact</li></a>
       </ul>
+
+      <div class="nav-open" id="nav-open">
+        <ul class="mobile-unordered-list" id="mobile-unordered-list">
+          <a class="mobile-unordered-list__link" onclick="navBarClose()" href=""><li class="mobile-unordered-list__link__list">&times;</li></a>
+          <a class="mobile-unordered-list__link" href="#home"><li class="mobile-unordered-list__link__list">Home</li></a>
+          <a class="mobile-unordered-list__link" href="#services"><li class="mobile-unordered-list__link__list">Services</li></a>
+          <a class="mobile-unordered-list__link" href="aboutMe"><li class="mobile-unordered-list__link__list">About Me</li></a>
+          <a class="mobile-unordered-list__link" href="#sessions"><li class="mobile-unordered-list__link__list">Sessions</li></a>
+          <a class="mobile-unordered-list__link" href="#contact"><li class="mobile-unordered-list__link__list">Contact</li></a>
+        </ul>
+      </div>
     </header>
     <section class="hero">
       <div class="arrow-left"><img alt="left-arrow" src="img/misc/home-arrow-left.png" /></div>
       <div class="slide">      
         <div class="slide-child slide-1">
           <div class="hero__text-div">
-            <h1 class="h1 hero__text-div__h1"><span>PEACE IS HERE.</span></h1>
+            <h1 class="h1 hero__text-div__h1"><span>PEACE IS HERE. </span></h1>
             <h1 class="heart">&#10084;</h1>
           </div>
         </div>
         <div class="slide-child slide-2">
           <div class="hero__text-div">
-            <h1 class="h1 hero__text-div__h1"><span>PEACE IS HERE.</span></h1>
+            <h1 class="h1 hero__text-div__h1"><span class="slide-2__span">PEACE IS HERE.</span></h1>
             <h1 class="heart">&#10084;</h1>
           </div>
         </div>
@@ -109,6 +121,18 @@
           rightArrowClick();
         }
       }, timer)
+
+      function navBarOpen() {
+
+        document.querySelector(".nav-open").style.display = "block";
+
+      }
+
+      function navBarClose() {
+
+        document.querySelector(".nav-open").style.display = "none";
+
+      }
 
 
     </script>
